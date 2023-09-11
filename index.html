@@ -7,36 +7,22 @@
     <link rel="stylesheet" href="converter.css" />
     <link rel="manifest" href="manifest.json" />
     <title>Temperature converter</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   </head>
   <body>
-    <h1>Temperature converter</h1>
-    <form id="converter">
-      <label for="input-temp">temperature</label>
-      <input type="text" id="input-temp" name="input-temp" value="20" />
-      <label for="input-unit">from</label>
-      <select id="input-unit" name="input-unit">
-        <option value="c" selected>Celsius</option>
-        <option value="f">Fahrenheit</option>
-        <option value="k">Kelvin</option>
-      </select>
-      <label for="output-unit">to</label>
-      <select id="output-unit" name="output-unit">
-        <option value="c">Celsius</option>
-        <option value="f" selected>Fahrenheit</option>
-        <option value="k">Kelvin</option>
-      </select>
-      <output
-        name="output-temp"
-        id="output-temp"
-        for="input-temp input-unit output-unit"
-        >68 F</output
-      >
+    <p>This demo shows how to send push notifications with a payload.</p>
+    <form>
+      Notification payload:
+      <input
+        id="notification-payload"
+        type="text"
+        value="Insert here a payload"
+      />
+      Notification delay:
+      <input id="notification-delay" type="number" value="5" /> Notification
+      Time-To-Live: <input id="notification-ttl" type="number" value="0" />
     </form>
-    <script src="converter.js"></script>
+    <button id="doIt">Request sending a notification!</button>
   </body>
-  <script>
-    if ("serviceWorker" in navigator) {
-      navigator.serviceWorker.register("/sw.js", { scope: "/" });
-    }
-  </script>
+  <script src="./push.js"></script>
 </html>
