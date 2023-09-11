@@ -2,7 +2,7 @@
   "name": "Web Push Notifications App",
   "short_name": "Push App",
   "description": "An example web app for push notifications",
-  "start_url": "/",
+  "start_url": "https://lukakoridze13.github.io/PWA/",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#007bff",
