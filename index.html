@@ -5,8 +5,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="manifest" href="/PWA/manifest.json" />
-    <script src="/main.js"></script>
+    <link rel="manifest" href="./manifest.json" />
+    <script src="./main.js"></script>
     <title>Web Push Subscription</title>
   </head>
   <body>
@@ -15,7 +15,7 @@
   </body>
   <script>
     if ("serviceWorker" in navigator) {
-      navigator.serviceWorker.register("/service-worker.js", { scope: "/" });
+      navigator.serviceWorker.register("./service-worker.js", { scope: "/" });
     }
   </script>
 </html>
